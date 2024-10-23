@@ -1,13 +1,13 @@
-import { Navigate, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
-import { useAuth } from '@/entitie/auth';
+// import { useAuth } from '@/entitie/auth';
 
 const ProtectedGuard = () => {
-    const { isLogined, loginLoading, user } = useAuth();
+    // const { isLogined, loginLoading, user } = useAuth();
 
-    if (loginLoading) return null;
+    // if (loginLoading) return null;
 
-    if (!isLogined || user?.role !== 'ADMIN') return <Navigate to="/error/403" />;
+    // if (!isLogined || user?.role !== 'ADMIN') return <Navigate to="/error/403" />;
 
     return <Outlet />;
 };

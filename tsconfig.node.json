@@ -1,24 +1,12 @@
 {
     "compilerOptions": {
         "composite": true,
-        "target": "ES2022",
-        "lib": ["ES2023"],
-        "module": "ESNext",
         "skipLibCheck": true,
-
-        /* Bundler mode */
+        "module": "ESNext",
         "moduleResolution": "bundler",
-        // "allowImportingTsExtensions": true,
-        "isolatedModules": true,
-        "moduleDetection": "force",
-        // "noEmit": true,
-        "jsxImportSource": "@emotion/react",
-
-        /* Linting */
+        "allowSyntheticDefaultImports": true,
         "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true
+        "esModuleInterop": true
     },
-    "include": ["vite.config.ts"]
+    "files": ["vite.config.ts"]
 }

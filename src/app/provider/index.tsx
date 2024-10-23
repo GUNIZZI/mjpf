@@ -5,8 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { AppRoutes } from '@/app/routes/routes';
 import { GlobalStyles } from '@/shared/styles/GlobalStyles';
 
-// const router = createBrowserRouter(AppRoutes, { basename: '/guni' });
-const router = createBrowserRouter(AppRoutes);
+const router = createBrowserRouter(AppRoutes, { basename: '/mjpf' });
 const queryClient = new QueryClient();
 
 const AppProvider = () => {

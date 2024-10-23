@@ -7,7 +7,7 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
     const isProduction = mode === 'production';
 
     return {
-        // base: '/guni',
+        base: '/mjpf',
         plugins: [
             react(),
             mkcert(),

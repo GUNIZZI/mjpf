@@ -4,7 +4,6 @@ import { NavLink, useNavigate, useOutlet } from 'react-router-dom';
 
 import { animatePageOut } from './animation';
 import { Style } from './Default.css';
-import { Template } from './Template';
 
 const Default = () => {
     // const location = useLocation();
