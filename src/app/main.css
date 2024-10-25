@@ -3,18 +3,21 @@ html {
 }
 body {
     min-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: scroll !important;
+}
+#root {
+    min-height: 100vh;
 }
 
 ::-webkit-scrollbar {
     width: 8px;
-    background-color: #2b2b2b;
+    background-color: #eeeeee;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #6b6b6b;
+    background-color: #b4b4b4;
     border-radius: 8px;
-    border: 2px solid #2b2b2b;
+    border: 2px solid #eeeeee;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -24,7 +27,7 @@ body {
 /* Firefox를 위한 스크롤바 스타일링 */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #6b6b6b #2b2b2b;
+    scrollbar-color: #b4b4b4 #eeeeee;
 }
 
 /* IE와 Edge를 위한 스크롤바 스타일링 */
@@ -37,6 +40,6 @@ body {
 }
 
 *::-ms-scrollbar-thumb {
-    background-color: #6b6b6b;
+    background-color: #b4b4b4;
     border-radius: 8px;
 }

@@ -3,6 +3,8 @@ import { css } from '@emotion/react';
 import { COLORS } from '@/shared/config/colors';
 
 const Style = () => css`
+    min-height: 100vh;
+
     header {
         position: sticky;
         top: 0;
@@ -19,6 +21,7 @@ const Style = () => css`
             background: #ffffff80;
 
             h1 {
+                color: ${COLORS.textPrimary};
                 font-size: 1.875rem;
                 font-weight: 700;
                 line-height: 1;

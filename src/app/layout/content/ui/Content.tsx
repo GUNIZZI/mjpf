@@ -1,30 +1,34 @@
-import { useRef, useEffect } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 
 import gsap from 'gsap';
 
-import { LayoutContent } from '@/app/layout';
 import { usePageContext } from '@/app/provider/usePageContext';
-import { FeaturePfList } from '@/feature/pf';
 
-const Portfolio = () => {
+import { Style } from './Content.css';
+
+interface OwnProps {
+    children: ReactNode;
+}
+
+const Content = ({ children }: OwnProps) => {
     const { targetUrl, onAnimationComplete } = usePageContext();
     const wrapRef = useRef(null);
 
     // In Animation
     useEffect(() => {
         if (wrapRef.current) {
-            //     const bg = (wrapRef.current as HTMLElement).querySelector('.bg');
+            const title = (wrapRef.current as HTMLElement).querySelector('h2');
             gsap.fromTo(
-                wrapRef.current,
+                title,
                 {
-                    y: 100,
+                    y: 50,
                     opacity: 0,
                 },
                 {
                     y: 0,
                     opacity: 1,
                     duration: 1.2,
-                    ease: 'power3.out',
+                    ease: 'power2.out',
                 },
             );
         }
@@ -33,7 +37,9 @@ const Portfolio = () => {
     // Out Animation
     useEffect(() => {
         if (targetUrl && wrapRef.current) {
-            gsap.to(wrapRef.current, {
+            const title = (wrapRef.current as HTMLElement).querySelector('h2');
+            gsap.to(title, {
+                y: -100,
                 opacity: 0,
                 duration: 1.2,
                 ease: 'power2.in',
@@ -45,17 +51,10 @@ const Portfolio = () => {
     }, [targetUrl]);
 
     return (
-        <LayoutContent>
-            <>
-                <h2>
-                    <strong>Portfolio</strong>
-                </h2>
-                <div ref={wrapRef}>
-                    <FeaturePfList />
-                </div>
-            </>
-        </LayoutContent>
+        <div ref={wrapRef} css={Style}>
+            {children}
+        </div>
     );
 };
 
-export { Portfolio };
+export { Content };

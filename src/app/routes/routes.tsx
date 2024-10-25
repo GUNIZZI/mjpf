@@ -6,6 +6,7 @@ import { Navigate } from 'react-router-dom';
 
 import { PageAbout } from '@/page/about';
 import { PageContact } from '@/page/contact';
+import { Error } from '@/page/error';
 import { PagePortfolio } from '@/page/portfolio';
 
 import { AppLayoutDefault } from '../layout';
@@ -104,10 +105,10 @@ const AppRoutes = [
             // },
         ],
     },
-    // {
-    //     path: '/error/:errorStatus',
-    //     element: <Error />,
-    // },
+    {
+        path: '/error/:errorStatus',
+        element: <Error />,
+    },
 ];
 
 export { AppRoutes };

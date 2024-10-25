@@ -30,6 +30,8 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: ['react', 'jsx-a11y', 'react-hooks', 'react-refresh', 'import'],
     rules: {
+        // key에 index사용가능 하도록 수정
+        'react/no-array-index-key': 'off',
         // 사용되지 않는 prop type에 대한 경고
         'react/no-unused-prop-types': 'warn',
         // 선택적 props에 대해 defaultProps의 요구
